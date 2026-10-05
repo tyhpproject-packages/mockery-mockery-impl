@@ -1,0 +1,43 @@
+{
+    "name": "tyhpdef/mockery-mockery-impl",
+    "description": "Implementation package for tyhpdef/mockery-mockery. Require tyhpdef/mockery-mockery, not this package.",
+    "keywords": [
+        "dev",
+        "static analysis",
+        "internal"
+    ],
+    "type": "library",
+    "license": "Apache-2.0",
+    "version": "1.6.15.0",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "tyhp": {
+            "interopContractVersion": 1,
+            "php-version": ">=8.2",
+            "require": {
+                "tyhpdef/php": "@dev",
+                "tyhpdef/hamcrest-hamcrest-php": "@dev"
+            },
+            "package": {
+                "include": [
+                    "./_tyhpdef/*.tyhpdef",
+                    "./_tyhpdef/extensions/*.tyhpdef"
+                ],
+                "overlay": [
+                    "./_tyhpdef/overlays/stubs/*.tyhpdef",
+                    "./_tyhpdef/overlays/*.tyhpdef"
+                ]
+            },
+            "public": "tyhpdef/mockery-mockery"
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "mockery/mockery": "1.6.15"
+    },
+    "require-dev": {
+        "tyhpdef/php": "@dev",
+        "tyhpdef/hamcrest-hamcrest-php": "@dev"
+    }
+}
